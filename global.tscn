@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://0p51q23tmm50"]
+
+[ext_resource type="AudioStream" uid="uid://drseqi27174a7" path="res://youtube_aId06-ZUtHE_audio.mp3" id="1_mdx76"]
+[ext_resource type="Script" path="res://Sonidos.gd" id="2_q5cn4"]
+
+[node name="Global" type="Node"]
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_mdx76")
+volume_db = -15.141
+pitch_scale = 3.01
+script = ExtResource("2_q5cn4")

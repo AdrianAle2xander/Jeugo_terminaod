@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqtln6y7hkpn0"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_5urjt"]
+[ext_resource type="Texture2D" uid="uid://ce78qo3ftu46h" path="res://gettyimages-1325433246-640x640.jpg" id="2_d7k4g"]
+[ext_resource type="AudioStream" uid="uid://3fe2gqb8b1df" path="res://lose.mp3" id="3_cyp2h"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5urjt")
+
+[node name="Gettyimages-1325433246-640x640" type="Sprite2D" parent="."]
+position = Vector2(574, 321)
+scale = Vector2(1.50521, 1.50926)
+texture = ExtResource("2_d7k4g")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 327.0
+offset_bottom = 99.0
+text = "Menu principal"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cyp2h")
+volume_db = -28.108
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

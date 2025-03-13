@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://isipmh58aryi"]
+
+[ext_resource type="Script" path="res://Juego.gd" id="1_eyig1"]
+[ext_resource type="AudioStream" uid="uid://bpnrvlp2rfowo" path="res://youtube_UoYMK1olf4s_audio.mp3" id="2_k4uwx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_eyig1")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 163.0
+offset_top = 2.0
+offset_right = 288.0
+offset_bottom = 33.0
+text = "Menu principal"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_k4uwx")
+volume_db = -4.261
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
